@@ -55,7 +55,7 @@ export default function Navbar() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </button>
-            <Link href="#order" className="bg-[#009fe3] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#007bb5] transition">
+            <Link href="#books" className="bg-[#009fe3] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#007bb5] transition">
               Order / Get Started
             </Link>
           </div>
@@ -98,7 +98,7 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-4 px-3">
-              <Link href="#order" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#009fe3] w-full block text-center text-white px-5 py-3 rounded-full text-base font-medium hover:bg-[#007bb5] transition">
+              <Link href="#books" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#009fe3] w-full block text-center text-white px-5 py-3 rounded-full text-base font-medium hover:bg-[#007bb5] transition">
                 Order / Get Started
               </Link>
             </div>
