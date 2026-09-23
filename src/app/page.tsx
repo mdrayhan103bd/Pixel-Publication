@@ -345,8 +345,8 @@ export default function Home() {
               <span className="w-8 h-[2px] bg-[#c5914c] mr-4"></span> About Pixel Publication
             </h2>
             <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <div className="w-full sm:w-2/5 h-32 bg-gray-200 rounded-lg shrink-0 flex items-center justify-center shadow-inner">
-                <span className="text-gray-400 text-sm">Books & Laptop Img</span>
+              <div className="w-full sm:w-1/2 h-40 bg-white rounded-lg shrink-0 flex items-center justify-center shadow-sm border border-gray-100 relative overflow-hidden">
+                <Image src="/about-img.jpg" alt="About Pixel Publication" fill className="object-contain p-2" />
               </div>
               <div>
                 <h3 className="font-bold text-xl text-gray-900 mb-3">About Pixel Publication</h3>
