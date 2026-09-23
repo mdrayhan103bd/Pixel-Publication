@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-  const themeColor = "#c5914c";
+  const themeColor = "#e31e24";
   
   return (
     <div className="flex flex-col items-center w-full bg-[#fcfcfc]">
@@ -12,8 +12,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="md:w-1/2 flex flex-col items-start z-10">
             <div className="flex items-center text-xs font-bold tracking-widest text-gray-500 mb-6 uppercase">
-              <span className="w-8 h-[2px] bg-[#c5914c] mr-3"></span>
-              <span className="text-[#c5914c] mr-2">Digital Skills</span> • Books • Software • Courses • Articles
+              <span className="w-8 h-[2px] bg-[#e31e24] mr-3"></span>
+              <span className="text-[#e31e24] mr-2">Digital Skills</span> • Books • Software • Courses • Articles
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-[1.1] text-gray-900">
               Learn Digital Skills.<br/>Work Smarter.
@@ -22,13 +22,13 @@ export default function Home() {
               Digital Skills Learning Books, Software Tools & Learning Resources for Modern Learners.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Link href="#books" className="bg-[#c5914c] text-white font-medium py-3 px-8 rounded-full shadow-md hover:bg-[#b07d3b] transition flex items-center justify-center">
+              <Link href="#books" className="bg-[#e31e24] text-white font-medium py-3 px-8 rounded-full shadow-md hover:bg-[#c1151a] transition flex items-center justify-center">
                 <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
                 Explore Books
               </Link>
-              <Link href="#software" className="bg-transparent border border-[#c5914c] text-[#c5914c] font-medium py-3 px-8 rounded-full hover:bg-[#c5914c]/10 transition flex items-center justify-center">
+              <Link href="#software" className="bg-transparent border border-[#e31e24] text-[#e31e24] font-medium py-3 px-8 rounded-full hover:bg-[#e31e24]/10 transition flex items-center justify-center">
                 <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -53,7 +53,7 @@ export default function Home() {
                  
                  {/* Book Spine (Left) */}
                  <div 
-                   className="absolute top-0 left-0 h-full w-[40px] bg-gradient-to-r from-gray-900 to-[#c5914c] border-r border-black/20"
+                   className="absolute top-0 left-0 h-full w-[40px] bg-gradient-to-r from-gray-900 to-[#e31e24] border-r border-black/20"
                    style={{ transform: "rotateY(-90deg) translateZ(20px) translateX(-20px)", transformOrigin: "center" }}
                  >
                    <div className="w-full h-full flex items-center justify-center -rotate-90 text-white font-bold tracking-widest text-xs whitespace-nowrap">
@@ -82,7 +82,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-2 flex items-center">
-              <span className="w-1 h-8 bg-[#c5914c] mr-3 rounded"></span> Featured Books
+              <span className="w-1 h-8 bg-[#e31e24] mr-3 rounded"></span> Featured Books
             </h2>
             <p className="text-gray-500 pl-4">Practical books designed to build real-world digital skills.</p>
           </div>
@@ -103,7 +103,7 @@ export default function Home() {
                    
                    {/* Book Spine (Left) */}
                    <div 
-                     className="absolute top-0 left-0 h-full w-[20px] bg-gradient-to-r from-gray-900 to-[#c5914c] border-r border-black/20"
+                     className="absolute top-0 left-0 h-full w-[20px] bg-gradient-to-r from-gray-900 to-[#e31e24] border-r border-black/20"
                      style={{ transform: "rotateY(-90deg) translateZ(10px) translateX(-10px)", transformOrigin: "center" }}
                    >
                      <div className="w-full h-full flex items-center justify-center -rotate-90 text-white font-bold tracking-widest text-[8px] whitespace-nowrap">
@@ -128,12 +128,12 @@ export default function Home() {
                 <ul className="space-y-2 mb-8">
                   {["Windows Basics", "Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Microsoft Access", "Bangla, English & Arabic Typing", "Practical Examples", "Shortcuts & Step-by-Step Learning"].map((feature, i) => (
                     <li key={i} className="flex items-start text-sm text-gray-600">
-                      <span className="text-[#c5914c] mr-2 mt-0.5">▪</span> {feature}
+                      <span className="text-[#e31e24] mr-2 mt-0.5">▪</span> {feature}
                     </li>
                   ))}
                 </ul>
                 <div className="flex gap-3 mt-auto">
-                  <button className="flex-1 bg-[#c5914c] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#b07d3b] transition flex justify-center items-center">
+                  <button className="flex-1 bg-[#e31e24] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#c1151a] transition flex justify-center items-center">
                     <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -154,14 +154,14 @@ export default function Home() {
             <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[1, 2, 3].map((item) => (
                 <div key={item} className="bg-[#f9f9f9] rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full min-h-[250px] border border-gray-50">
-                  <div className="w-12 h-12 rounded-full bg-[#c5914c]/10 flex items-center justify-center mb-4 text-[#c5914c]">
+                  <div className="w-12 h-12 rounded-full bg-[#e31e24]/10 flex items-center justify-center mb-4 text-[#e31e24]">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   </div>
                   <h4 className="font-bold text-gray-800 text-lg mb-2">More Digital Skills Books</h4>
                   <p className="text-gray-500 font-medium">Coming Soon</p>
-                  <div className="w-8 h-1 bg-[#c5914c]/30 rounded-full mt-4"></div>
+                  <div className="w-8 h-1 bg-[#e31e24]/30 rounded-full mt-4"></div>
                 </div>
               ))}
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-2 flex items-center">
-              <span className="w-1 h-8 bg-[#c5914c] mr-3 rounded"></span> Software & Office Add-ins
+              <span className="w-1 h-8 bg-[#e31e24] mr-3 rounded"></span> Software & Office Add-ins
             </h2>
             <p className="text-gray-500 pl-4">Useful tools designed to make everyday digital work easier.</p>
           </div>
@@ -208,7 +208,7 @@ export default function Home() {
               </ul>
               
               <div className="flex gap-3 mt-auto">
-                <button className="flex-1 bg-[#c5914c] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#b07d3b] transition flex justify-center items-center">
+                <button className="flex-1 bg-[#e31e24] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#c1151a] transition flex justify-center items-center">
                   <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -269,7 +269,7 @@ export default function Home() {
 
             {/* Paid Courses */}
             <div className="flex-1 bg-[#fdfaf5] border border-[#f5ead6] rounded-2xl p-6 flex items-center w-full shadow-sm">
-              <div className="w-14 h-14 bg-[#c5914c]/10 rounded-xl flex items-center justify-center text-[#c5914c] mr-5">
+              <div className="w-14 h-14 bg-[#e31e24]/10 rounded-xl flex items-center justify-center text-[#e31e24] mr-5">
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M12 14l9-5-9-5-9 5 9 5z" />
                   <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
@@ -277,14 +277,14 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-bold text-[#b07d3b] mb-1">PAID COURSES</h4>
+                <h4 className="font-bold text-[#c1151a] mb-1">PAID COURSES</h4>
                 <p className="text-gray-500 text-sm">Structured courses for deeper practical learning.</p>
               </div>
             </div>
 
             {/* Explore Button */}
             <div className="flex-shrink-0 w-full lg:w-auto text-center lg:text-left mt-4 lg:mt-0">
-              <Link href="#courses" className="inline-flex bg-[#c5914c] text-white py-4 px-8 rounded-full font-medium hover:bg-[#b07d3b] transition items-center justify-center w-full lg:w-auto shadow-md">
+              <Link href="#courses" className="inline-flex bg-[#e31e24] text-white py-4 px-8 rounded-full font-medium hover:bg-[#c1151a] transition items-center justify-center w-full lg:w-auto shadow-md">
                 Explore Courses 
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -300,7 +300,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-2 flex items-center">
-              <span className="w-1 h-8 bg-[#c5914c] mr-3 rounded"></span> Learning Articles
+              <span className="w-1 h-8 bg-[#e31e24] mr-3 rounded"></span> Learning Articles
             </h2>
           </div>
           
@@ -321,9 +321,9 @@ export default function Home() {
                 </div>
                 <div className="px-2 flex flex-col flex-grow">
                   <span className="text-xs font-bold text-gray-400 tracking-wider mb-2 uppercase">{article.tag}</span>
-                  <h4 className="font-bold text-lg text-gray-900 mb-2 leading-snug group-hover:text-[#c5914c] transition">{article.title}</h4>
+                  <h4 className="font-bold text-lg text-gray-900 mb-2 leading-snug group-hover:text-[#e31e24] transition">{article.title}</h4>
                   <p className="text-gray-500 text-sm mb-4 line-clamp-3">{article.desc}</p>
-                  <span className="text-[#c5914c] text-sm font-bold flex items-center mt-auto">
+                  <span className="text-[#e31e24] text-sm font-bold flex items-center mt-auto">
                     Read Article 
                     <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -342,7 +342,7 @@ export default function Home() {
           {/* About */}
           <div className="lg:w-1/2">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-              <span className="w-8 h-[2px] bg-[#c5914c] mr-4"></span> About Pixel Publication
+              <span className="w-8 h-[2px] bg-[#e31e24] mr-4"></span> About Pixel Publication
             </h2>
             <div className="flex flex-col sm:flex-row gap-6 items-start">
               <div className="w-full sm:w-1/2 h-40 bg-white rounded-lg shrink-0 flex items-center justify-center shadow-sm border border-gray-100 relative overflow-hidden">
@@ -360,7 +360,7 @@ export default function Home() {
           {/* Why Choose Us */}
           <div className="lg:w-1/2">
             <h2 className="text-lg font-bold text-gray-900 mb-8 flex items-center justify-center lg:justify-start">
-              <span className="w-8 h-[2px] bg-[#c5914c] mr-4"></span> Why Choose Us
+              <span className="w-8 h-[2px] bg-[#e31e24] mr-4"></span> Why Choose Us
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
@@ -369,8 +369,8 @@ export default function Home() {
                 {icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z", label: "Useful Digital Tools"},
                 {icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6", label: "Continuous Learning"}
               ].map((item, i) => (
-                <div key={i} className="bg-white border border-gray-100 p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-[#c5914c]/30 hover:shadow-md transition">
-                  <div className="w-12 h-12 bg-[#c5914c]/10 text-[#c5914c] rounded-full flex items-center justify-center mb-3">
+                <div key={i} className="bg-white border border-gray-100 p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-[#e31e24]/30 hover:shadow-md transition">
+                  <div className="w-12 h-12 bg-[#e31e24]/10 text-[#e31e24] rounded-full flex items-center justify-center mb-3">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                     </svg>

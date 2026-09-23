@@ -33,7 +33,7 @@ export default function AdminLayout({
   }, [router, pathname]);
 
   if (loading) {
-    return <div className="min-h-screen flex items-center justify-center bg-gray-50 text-[#c5914c] font-bold">Loading Admin...</div>;
+    return <div className="min-h-screen flex items-center justify-center bg-gray-50 text-[#e31e24] font-bold">Loading Admin...</div>;
   }
 
   // If on login page, don't show sidebar
