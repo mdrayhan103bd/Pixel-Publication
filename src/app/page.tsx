@@ -225,9 +225,9 @@ export default function Home() {
             </div>
 
             {/* Software Screenshot */}
-            <div className="lg:col-span-5 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden flex items-center justify-center p-4">
-              <div className="w-full h-full min-h-[300px] bg-gray-100 rounded-xl flex items-center justify-center border border-gray-200">
-                <span className="text-gray-400 font-medium">Software Interface Mockup</span>
+            <div className="lg:col-span-7 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden flex items-center justify-center p-4">
+              <div className="w-full h-full min-h-[300px] relative rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                <Image src="/software-mockup.png" alt="Unicode to Bijoy Converter Interface" fill className="object-cover object-left-top" />
               </div>
             </div>
 
