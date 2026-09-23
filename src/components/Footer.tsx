@@ -15,7 +15,7 @@ export default function Footer() {
                 alt="Pixel Publication Logo" 
                 width={150} 
                 height={50} 
-                className="object-contain brightness-0 invert"
+                className="object-contain brightness-0 invert w-32 sm:w-36 h-auto"
               />
             </Link>
             <p className="text-gray-400 text-sm max-w-xs leading-relaxed">

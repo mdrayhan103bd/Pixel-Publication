@@ -30,7 +30,7 @@ export default function Navbar() {
                 alt="Pixel Publication Logo" 
                 width={150} 
                 height={50} 
-                className="object-contain cursor-pointer"
+                className="object-contain cursor-pointer w-28 sm:w-36 h-auto"
                 priority
               />
             </Link>
