@@ -23,14 +23,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/">
+          <div className="flex-shrink-0 flex items-center h-full py-2">
+            <Link href="/" className="relative block h-10 w-32 sm:h-12 sm:w-40">
               <Image 
                 src="/logo.png" 
                 alt="Pixel Publication Logo" 
-                width={150} 
-                height={50} 
-                className="object-contain cursor-pointer w-28 sm:w-36 h-auto"
+                fill
+                className="object-contain object-left cursor-pointer"
                 priority
               />
             </Link>

@@ -9,13 +9,12 @@ export default function Footer() {
           
           {/* Left: Logo & Desc */}
           <div className="lg:w-1/3">
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" className="relative block h-12 w-32 sm:h-16 sm:w-40 mb-4">
               <Image 
                 src="/logo.png" 
                 alt="Pixel Publication Logo" 
-                width={150} 
-                height={50} 
-                className="object-contain brightness-0 invert w-32 sm:w-36 h-auto"
+                fill
+                className="object-contain object-left brightness-0 invert"
               />
             </Link>
             <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
