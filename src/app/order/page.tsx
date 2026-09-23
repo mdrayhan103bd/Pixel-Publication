@@ -31,6 +31,16 @@ function OrderForm() {
     }
 
     const fetchItem = async () => {
+      if (id === "dummy-book") {
+        setItem({ id, title: "Basic Office Application", price: "250", imageUrl: "/book-cover.jpg" });
+        setLoading(false);
+        return;
+      }
+      if (id === "dummy-software") {
+        setItem({ id, title: "Pixel Formatter", price: "150", imageUrl: "/software-mockup.png" });
+        setLoading(false);
+        return;
+      }
       try {
         const docRef = doc(db, type === "software" ? "software" : type === "course" ? "courses" : "books", id);
         const docSnap = await getDoc(docRef);

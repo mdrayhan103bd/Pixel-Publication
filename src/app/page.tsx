@@ -193,19 +193,13 @@ export default async function Home() {
                     ))}
                   </ul>
                   <div className="flex gap-3 mt-auto">
-                    {mainBook.buyLink ? (
-                      <Link href={mainBook.buyLink !== "#" ? mainBook.buyLink : `/order?type=book&id=${mainBook.id}`} className="flex-1 bg-[#009fe3] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#007bb5] transition flex justify-center items-center">
-                        <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                        Order Now
-                      </Link>
-                    ) : (
-                      <button className="flex-1 bg-[#009fe3] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#007bb5] transition flex justify-center items-center">
-                        Coming Soon
-                      </button>
-                    )}
+                    <Link href={mainBook.buyLink && mainBook.buyLink !== "#" ? mainBook.buyLink : `/order?type=book&id=${mainBook.id}`} className="flex-1 bg-[#009fe3] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#007bb5] transition flex justify-center items-center">
+                      <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                      Order Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -223,9 +217,7 @@ export default async function Home() {
                     </div>
                     <h4 className="font-bold text-gray-800 text-lg mb-2">{book.title}</h4>
                     <p className="text-gray-500 text-sm mb-4 line-clamp-2">{book.description}</p>
-                    {book.buyLink && (
-                      <Link href={book.buyLink !== "#" ? book.buyLink : `/order?type=book&id=${book.id}`} className="mt-auto text-[#009fe3] font-medium text-sm border border-[#009fe3] rounded-full px-4 py-1.5 hover:bg-[#009fe3]/10">Order Now</Link>
-                    )}
+                    <Link href={book.buyLink && book.buyLink !== "#" ? book.buyLink : `/order?type=book&id=${book.id}`} className="mt-auto text-[#009fe3] font-medium text-sm border border-[#009fe3] rounded-full px-4 py-1.5 hover:bg-[#009fe3]/10">Order Now</Link>
                   </div>
                 ))}
                 
@@ -292,14 +284,12 @@ export default async function Home() {
                 </ul>
                 
                 <div className="flex gap-3 mt-auto">
-                  {mainSoftware.buyLink && (
-                    <Link href={mainSoftware.buyLink !== "#" ? mainSoftware.buyLink : `/order?type=software&id=${mainSoftware.id}`} className="flex-1 bg-[#009fe3] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#007bb5] transition flex justify-center items-center">
-                      <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                      </svg>
-                      Order Software
-                    </Link>
-                  )}
+                  <Link href={mainSoftware.buyLink && mainSoftware.buyLink !== "#" ? mainSoftware.buyLink : `/order?type=software&id=${mainSoftware.id}`} className="flex-1 bg-[#009fe3] text-white py-2.5 px-4 rounded-full text-sm font-medium hover:bg-[#007bb5] transition flex justify-center items-center">
+                    <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Order Software
+                  </Link>
                 </div>
               </div>
 
@@ -360,11 +350,9 @@ export default async function Home() {
                       </div>
                       <h3 className="font-bold text-lg text-gray-900 mb-2 line-clamp-2">{course.title}</h3>
                       <p className="text-gray-500 text-sm mb-4">by {course.instructor}</p>
-                      {course.enrollLink && (
-                        <Link href={course.enrollLink !== "#" ? course.enrollLink : `/order?type=course&id=${course.id}`} className="block text-center w-full py-2 bg-gray-50 hover:bg-[#009fe3]/10 text-[#009fe3] font-medium rounded-lg transition text-sm">
-                          Enroll Now
-                        </Link>
-                      )}
+                      <Link href={course.enrollLink && course.enrollLink !== "#" ? course.enrollLink : `/order?type=course&id=${course.id}`} className="block text-center w-full py-2 bg-gray-50 hover:bg-[#009fe3]/10 text-[#009fe3] font-medium rounded-lg transition text-sm">
+                        Enroll Now
+                      </Link>
                     </div>
                   </div>
                 ))}
