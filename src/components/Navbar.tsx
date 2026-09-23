@@ -6,18 +6,29 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const themeColor = "#c5914c";
+
+  const navLinks = [
+    { name: "Home", href: "/", active: true },
+    { name: "Books", href: "#books" },
+    { name: "Software", href: "#software" },
+    { name: "Courses", href: "#courses" },
+    { name: "Learning Articles", href: "#articles" },
+    { name: "About Publication", href: "#about" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-white sticky top-0 z-50 border-b border-gray-100 py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-16 items-center">
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
               <Image 
                 src="/logo.png" 
                 alt="Pixel Publication Logo" 
-                width={120} 
+                width={150} 
                 height={50} 
                 className="object-contain cursor-pointer"
                 priority
@@ -26,29 +37,40 @@ export default function Navbar() {
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">
-              Home
-            </Link>
-            <Link href="#books" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">
-              Books
-            </Link>
-            <Link href="#authors" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">
-              Authors
-            </Link>
-            <Link href="#about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">
-              About Us
-            </Link>
-            <Link href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">
-              Contact
+          <div className="hidden lg:flex lg:items-center lg:space-x-6">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                href={link.href} 
+                className={`text-sm font-medium transition ${link.active ? 'text-gray-900 border-b-2 border-[#c5914c] pb-1' : 'text-gray-600 hover:text-[#c5914c]'}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Right Actions */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <button className="text-gray-500 hover:text-[#c5914c]">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </button>
+            <Link href="#order" className="bg-[#c5914c] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#b07d3b] transition">
+              Order / Get Started
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center lg:hidden space-x-4">
+             <button className="text-gray-500 hover:text-[#c5914c]">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </button>
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none p-2"
+              className="text-gray-700 hover:text-[#c5914c] focus:outline-none p-1"
             >
               <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
@@ -64,43 +86,23 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
-          <div className="px-4 pt-2 pb-6 space-y-2 flex flex-col">
-            <Link 
-              href="/" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-3 rounded-md text-base font-medium transition"
-            >
-              Home
-            </Link>
-            <Link 
-              href="#books" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-3 rounded-md text-base font-medium transition"
-            >
-              Books
-            </Link>
-            <Link 
-              href="#authors" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-3 rounded-md text-base font-medium transition"
-            >
-              Authors
-            </Link>
-            <Link 
-              href="#about" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-3 rounded-md text-base font-medium transition"
-            >
-              About Us
-            </Link>
-            <Link 
-              href="#contact" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-3 rounded-md text-base font-medium transition"
-            >
-              Contact
-            </Link>
+        <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+          <div className="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name}
+                href={link.href} 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block px-3 py-3 rounded-md text-base font-medium transition ${link.active ? 'bg-[#c5914c]/10 text-[#c5914c]' : 'text-gray-700 hover:text-[#c5914c] hover:bg-gray-50'}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <div className="pt-4 px-3">
+              <Link href="#order" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#c5914c] w-full block text-center text-white px-5 py-3 rounded-full text-base font-medium hover:bg-[#b07d3b] transition">
+                Order / Get Started
+              </Link>
+            </div>
           </div>
         </div>
       )}
