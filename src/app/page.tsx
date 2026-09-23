@@ -27,8 +27,35 @@ export default async function Home() {
   const themeColor = "#009fe3";
   
   // Fetch dynamic data
-  const books = await getCollection("books");
-  const software = await getCollection("software");
+  let books = await getCollection("books");
+  if (books.length === 0) {
+    books = [
+      {
+        id: "dummy-book",
+        title: "Basic Office Application",
+        description: "Master Microsoft Word, Excel, PowerPoint, and Access with practical real-world projects. Designed for beginners and professionals.",
+        features: ["MS Word, Excel, PowerPoint", "100+ Keyboard Shortcuts", "Real-world projects"],
+        imageUrl: "/book-cover.jpg",
+        buyLink: "#"
+      }
+    ];
+  }
+  
+  let software = await getCollection("software");
+  if (software.length === 0) {
+    software = [
+      {
+        id: "dummy-software",
+        title: "Pixel Formatter",
+        subtitle: "MS Word Add-in",
+        description: "A powerful one-click formatting tool that saves you hours of manual work when editing documents.",
+        features: ["Auto-format paragraphs", "Fix spacing issues", "One-click indexing"],
+        imageUrl: "/software-mockup.png",
+        buyLink: "#"
+      }
+    ];
+  }
+  
   const courses = await getCollection("courses");
   const articles = await getCollection("articles");
   
