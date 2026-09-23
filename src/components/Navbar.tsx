@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const themeColor = "#e31e24";
+  const themeColor = "#009fe3";
 
   const navLinks = [
     { name: "Home", href: "/", active: true },
@@ -41,7 +41,7 @@ export default function Navbar() {
               <Link 
                 key={link.name} 
                 href={link.href} 
-                className={`text-sm font-medium transition ${link.active ? 'text-gray-900 border-b-2 border-[#e31e24] pb-1' : 'text-gray-600 hover:text-[#e31e24]'}`}
+                className={`text-sm font-medium transition ${link.active ? 'text-gray-900 border-b-2 border-[#009fe3] pb-1' : 'text-gray-600 hover:text-[#009fe3]'}`}
               >
                 {link.name}
               </Link>
@@ -50,26 +50,26 @@ export default function Navbar() {
 
           {/* Right Actions */}
           <div className="hidden lg:flex items-center space-x-6">
-            <button className="text-gray-500 hover:text-[#e31e24]">
+            <button className="text-gray-500 hover:text-[#009fe3]">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </button>
-            <Link href="#order" className="bg-[#e31e24] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#c1151a] transition">
+            <Link href="#order" className="bg-[#009fe3] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#007bb5] transition">
               Order / Get Started
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center lg:hidden space-x-4">
-             <button className="text-gray-500 hover:text-[#e31e24]">
+             <button className="text-gray-500 hover:text-[#009fe3]">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </button>
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-[#e31e24] focus:outline-none p-1"
+              className="text-gray-700 hover:text-[#009fe3] focus:outline-none p-1"
             >
               <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
@@ -92,13 +92,13 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href} 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-3 py-3 rounded-md text-base font-medium transition ${link.active ? 'bg-[#e31e24]/10 text-[#e31e24]' : 'text-gray-700 hover:text-[#e31e24] hover:bg-gray-50'}`}
+                className={`block px-3 py-3 rounded-md text-base font-medium transition ${link.active ? 'bg-[#009fe3]/10 text-[#009fe3]' : 'text-gray-700 hover:text-[#009fe3] hover:bg-gray-50'}`}
               >
                 {link.name}
               </Link>
             ))}
             <div className="pt-4 px-3">
-              <Link href="#order" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#e31e24] w-full block text-center text-white px-5 py-3 rounded-full text-base font-medium hover:bg-[#c1151a] transition">
+              <Link href="#order" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#009fe3] w-full block text-center text-white px-5 py-3 rounded-full text-base font-medium hover:bg-[#007bb5] transition">
                 Order / Get Started
               </Link>
             </div>

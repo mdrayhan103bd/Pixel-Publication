@@ -32,7 +32,7 @@ export default function AdminSidebar() {
   return (
     <div className="w-64 bg-gray-900 text-white min-h-screen flex flex-col">
       <div className="p-6">
-        <h2 className="text-2xl font-bold text-[#e31e24]">Admin Panel</h2>
+        <h2 className="text-2xl font-bold text-[#009fe3]">Admin Panel</h2>
         <p className="text-gray-400 text-xs mt-1">Pixel Publication</p>
       </div>
       
@@ -44,7 +44,7 @@ export default function AdminSidebar() {
               key={link.name} 
               href={link.href}
               className={`flex items-center px-4 py-3 rounded-lg transition ${
-                isActive ? 'bg-[#e31e24] text-white shadow-md' : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                isActive ? 'bg-[#009fe3] text-white shadow-md' : 'text-gray-300 hover:bg-gray-800 hover:text-white'
               }`}
             >
               <svg className="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
