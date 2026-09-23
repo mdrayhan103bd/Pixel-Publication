@@ -37,10 +37,41 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="md:w-1/2 flex justify-end w-full relative h-[400px]">
-             {/* Mockup image placeholder for hero book & laptop */}
-             <div className="absolute right-0 top-0 w-full md:w-[120%] h-full bg-gray-200 rounded-l-2xl overflow-hidden shadow-2xl flex items-center justify-center">
-                <span className="text-gray-500 text-xl font-medium">Hero Image (Book & Laptop)</span>
+          <div className="md:w-1/2 flex justify-center lg:justify-end w-full relative h-[400px] md:h-[500px] items-center">
+             {/* 3D Book Mockup */}
+             <div className="relative group cursor-pointer" style={{ perspective: "1500px" }}>
+               <div 
+                 className="relative w-56 md:w-72 h-[350px] md:h-[420px] transition-transform duration-700 ease-out group-hover:rotate-y-[25deg]" 
+                 style={{ transformStyle: "preserve-3d", transform: "rotateY(20deg) rotateX(5deg)" }}
+               >
+                 {/* Front Cover */}
+                 <div className="absolute inset-0 z-20 rounded-r-md overflow-hidden bg-white shadow-2xl" style={{ transform: "translateZ(20px)" }}>
+                   <Image src="/book-cover.jpg" alt="Basic Office Application Book" fill className="object-fill" priority />
+                   {/* Glossy Overlay */}
+                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent"></div>
+                 </div>
+                 
+                 {/* Book Spine (Left) */}
+                 <div 
+                   className="absolute top-0 left-0 h-full w-[40px] bg-gradient-to-r from-gray-900 to-[#c5914c] border-r border-black/20"
+                   style={{ transform: "rotateY(-90deg) translateZ(20px) translateX(-20px)", transformOrigin: "center" }}
+                 >
+                   <div className="w-full h-full flex items-center justify-center -rotate-90 text-white font-bold tracking-widest text-xs whitespace-nowrap">
+                     বেসিক অফিস অ্যাপ্লিকেশন
+                   </div>
+                 </div>
+                 
+                 {/* Book Pages (Top) */}
+                 <div 
+                   className="absolute top-0 left-0 w-full h-[40px] bg-gray-100 flex justify-evenly px-1"
+                   style={{ transform: "rotateX(90deg) translateZ(20px) translateY(-20px)", transformOrigin: "center" }}
+                 >
+                    {[...Array(40)].map((_,i) => <div key={i} className="w-px h-full bg-gray-300 opacity-60"></div>)}
+                 </div>
+
+                 {/* Book Back Cover */}
+                 <div className="absolute inset-0 z-0 bg-[#8b2323] rounded-l-md shadow-2xl" style={{ transform: "translateZ(-20px)" }}></div>
+               </div>
              </div>
           </div>
         </div>
@@ -59,8 +90,38 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Main Featured Book */}
             <div className="lg:col-span-6 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden flex flex-col sm:flex-row p-6 sm:p-8">
-              <div className="w-full sm:w-2/5 h-64 sm:h-auto bg-gray-100 rounded-xl mb-6 sm:mb-0 sm:mr-8 flex items-center justify-center shadow-inner relative">
-                 <span className="text-gray-400 text-sm">Book Cover 3D</span>
+              <div className="w-full sm:w-2/5 min-h-[300px] mb-6 sm:mb-0 sm:mr-8 flex items-center justify-center relative perspective-[1200px]" style={{ perspective: "1200px" }}>
+                 <div 
+                   className="relative w-40 h-[240px] md:w-48 md:h-[280px] transition-transform duration-500 ease-out hover:rotate-y-[20deg]"
+                   style={{ transformStyle: "preserve-3d", transform: "rotateY(15deg) rotateX(5deg)" }}
+                 >
+                   {/* Front Cover */}
+                   <div className="absolute inset-0 z-20 rounded-r-sm overflow-hidden bg-white shadow-xl" style={{ transform: "translateZ(10px)" }}>
+                     <Image src="/book-cover.jpg" alt="Basic Office Application Book" fill className="object-fill" />
+                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent"></div>
+                   </div>
+                   
+                   {/* Book Spine (Left) */}
+                   <div 
+                     className="absolute top-0 left-0 h-full w-[20px] bg-gradient-to-r from-gray-900 to-[#c5914c] border-r border-black/20"
+                     style={{ transform: "rotateY(-90deg) translateZ(10px) translateX(-10px)", transformOrigin: "center" }}
+                   >
+                     <div className="w-full h-full flex items-center justify-center -rotate-90 text-white font-bold tracking-widest text-[8px] whitespace-nowrap">
+                       বেসিক অফিস অ্যাপ্লিকেশন
+                     </div>
+                   </div>
+                   
+                   {/* Book Pages (Top) */}
+                   <div 
+                     className="absolute top-0 left-0 w-full h-[20px] bg-gray-100 flex justify-evenly px-1"
+                     style={{ transform: "rotateX(90deg) translateZ(10px) translateY(-10px)", transformOrigin: "center" }}
+                   >
+                      {[...Array(20)].map((_,i) => <div key={i} className="w-px h-full bg-gray-300 opacity-60"></div>)}
+                   </div>
+
+                   {/* Book Back Cover */}
+                   <div className="absolute inset-0 z-0 bg-[#8b2323] rounded-l-sm shadow-xl" style={{ transform: "translateZ(-10px)" }}></div>
+                 </div>
               </div>
               <div className="w-full sm:w-3/5 flex flex-col justify-center">
                 <h3 className="font-bold text-2xl text-gray-900 mb-4">Basic Office Application</h3>
