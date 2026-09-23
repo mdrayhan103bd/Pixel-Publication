@@ -3,14 +3,23 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start text-center sm:text-left bg-white p-10 rounded-2xl shadow-xl max-w-2xl w-full mx-4">
-        <div className="w-full flex justify-center mb-4">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-600 tracking-tight">
-            Pixel Publication
-          </h1>
+      <main className="flex flex-col gap-6 row-start-2 items-center text-center bg-white p-10 rounded-2xl shadow-xl max-w-2xl w-full mx-4">
+        <div className="w-full flex justify-center">
+          <Image 
+            src="/logo.png" 
+            alt="Pixel Publication Logo" 
+            width={220} 
+            height={220} 
+            className="object-contain"
+            priority
+          />
         </div>
         
-        <p className="text-gray-600 text-lg sm:text-xl text-center w-full mb-6">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-600 tracking-tight hidden">
+          Pixel Publication
+        </h1>
+        
+        <p className="text-gray-600 text-lg sm:text-xl text-center w-full mt-4 mb-6">
           Welcome to the official website of Pixel Publication. We are building something amazing here.
         </p>
 
