@@ -13,8 +13,8 @@ export default function Navbar() {
     { name: "Books", href: "/#books" },
     { name: "Software", href: "/#software" },
     { name: "Courses", href: "/#courses" },
-    { name: "Articles", href: "/#articles" },
     { name: "Practice Hub", href: "/practice-hub" },
+    { name: "Toolbox", href: "/toolbox" },
     { name: "About", href: "/#about" },
   ];
 
