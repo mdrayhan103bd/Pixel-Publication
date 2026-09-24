@@ -10,12 +10,12 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/", active: true },
-    { name: "Books", href: "#books" },
-    { name: "Software", href: "#software" },
-    { name: "Courses", href: "#courses" },
-    { name: "Learning Articles", href: "#articles" },
-    { name: "About Publication", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Books", href: "/#books" },
+    { name: "Software", href: "/#software" },
+    { name: "Courses", href: "/#courses" },
+    { name: "Articles", href: "/#articles" },
+    { name: "Practice Hub", href: "/practice-hub" },
+    { name: "About", href: "/#about" },
   ];
 
   return (
